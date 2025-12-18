@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 min-h-screen font-sans text-gray-900;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-200 flex items-center gap-2 justify-center shadow-sm border;
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white border-black hover:bg-gray-800 hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-900 border-gray-300 hover:bg-gray-100 hover:shadow-md;
+  }
+  
+  .btn-accent {
+    @apply bg-gray-100 text-gray-900 border-gray-300 hover:bg-gray-200 hover:shadow-md;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-gray-900;
+  }
+  
+  .card-animated {
+    @apply bg-white rounded-lg p-6 shadow-sm border border-gray-200 transition-all duration-200 hover:shadow-md text-gray-900;
+  }
+  
+  .input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:border-black focus:ring-1 focus:ring-black transition-all duration-200 text-gray-900 placeholder-gray-400 bg-gray-50;
+  }
+  
+  .quick-amount {
+    @apply bg-white border border-gray-300 p-4 rounded-md cursor-pointer transition-all duration-200 text-center font-medium hover:bg-gray-100 hover:border-gray-400 shadow-sm text-gray-900;
+  }
+  
+  .quick-amount.active {
+    @apply bg-gray-900 text-white border-gray-900 shadow-md;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 hover:bg-gray-500;
+}
+
+/* Smooth page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Smooth button transitions */
+button, a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Smooth hover effects */
+.hover-lift {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

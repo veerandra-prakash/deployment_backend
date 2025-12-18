@@ -1,0 +1,3 @@
+- [ ] Adjust popular badge positioning in Offers.jsx (top: '-8px', right: '10px')
+- [ ] Increase gap in Navigation.jsx between logo and nav items (gap-6 to gap-8)
+- [ ] Verify visual changes
